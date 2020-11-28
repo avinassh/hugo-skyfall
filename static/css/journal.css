@@ -151,6 +151,11 @@ h6 {
   .site-nav h1 {
     margin-bottom: .5rem; }
 
+.site-header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .site-nav a::before {
   content: '\2190';
   margin-right: .25rem; }
