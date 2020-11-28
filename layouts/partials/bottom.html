@@ -24,6 +24,11 @@
           {{ if isset .Site.Params "gpg" -}}
           <a itemprop="sameAs" href="{{ .Site.Params.gpg.link }}" title="GPG {{ .Site.Params.gpg.key }} (fingerprint: {{ .Site.Params.gpg.fingerprint }})">GPG</a>
           {{- end }}
+
+          {{ range $.Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+
         </span>
 
         <!-- {{ hugo.BuildDate }} -->
