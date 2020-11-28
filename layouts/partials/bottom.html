@@ -14,10 +14,10 @@
           <br>
 
           {{ if isset .Site.Params "githubusername" -}}
-          <a itemprop="sameAs" href="https://github.com/{{ .Site.Params.githubUsername }}" title="GitHub"><img src="svg/gh.svg" alt="icon name"></a>
+          <a itemprop="sameAs" href="https://github.com/{{ .Site.Params.githubUsername }}" title="GitHub"><img src="{{ "svg/gh.svg" | relURL }}" alt="icon name"></a>
           {{- end }}
 
-          <a itemprop="sameAs" href="{{ "index.xml" | relURL }}" title="GitHub"><img src="svg/rss.svg" alt="icon name"></a>
+          <a itemprop="sameAs" href="{{ "index.xml" | relURL }}" title="GitHub"><img src="{{ "svg/rss.svg" | relURL }}" alt="icon name"></a>
 
           {{ if isset .Site.Params "twitterusername" -}}
           <a itemprop="sameAs" href="https://twitter.com/{{ .Site.Params.twitterUsername }}" title="Twitter">TW</a>
