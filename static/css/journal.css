@@ -169,6 +169,11 @@ h6 {
     .site-footer {
       margin-bottom: .5rem; } }
 
+.site-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .posts ol {
   margin-left: 0;
   list-style: none; }
