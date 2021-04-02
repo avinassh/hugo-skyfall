@@ -19,12 +19,18 @@
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
   <meta property="og:type" content="article">
-  <meta property="og:description" content="{{ .Description }}">
   {{ if .Params.Thumbnail }}
   <meta property="og:image" content="{{ .Params.Thumbnail | absURL }}"/>
   <meta property="og:image:secure_url" content="{{ .Params.Thumbnail | absURL }}"/>
   {{ end }}
+  {{ if .Description }}
+  <meta property="og:description" content="{{ .Description }}">
   <meta name="description" content="{{ .Description }}">
+  {{ end }}
+  {{ if .Summary }}
+  <meta property="og:description" content="{{ .Summary }}">
+  <meta name="description" content="{{ .Summary }}">
+  {{ end }}
   {{- end }}
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Arvo:400,700">
