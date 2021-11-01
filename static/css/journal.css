@@ -188,11 +188,6 @@ h6 {
   @media screen and (min-width: 800px) {
     .posts time {
       flex: 0 0 5rem; } }
-  .posts time + a {
-    margin-left: 1rem; }
-    @media screen and (min-width: 800px) {
-      .posts time + a {
-        margin-left: 2rem; } }
 
 .post .post-header {
   margin-bottom: 3rem; }
