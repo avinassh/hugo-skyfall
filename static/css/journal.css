@@ -204,4 +204,6 @@ h6 {
 .hljs {
   font-size: .875rem; }
 
-.rc-scout a { text-decoration: none; }
+.rc-scout__link {
+    border-bottom: none;
+}
