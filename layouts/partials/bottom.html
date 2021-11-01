@@ -5,7 +5,7 @@
         <script async defer src="https://www.recurse-scout.com/loader.js?t={{ .Site.Params.rcscout }}"></script>
         {{- end }}
 
-        <span itemscope itemtype="http://schema.org/Person">
+        <span class="person-schema" itemscope itemtype="http://schema.org/Person">
           <link itemprop="url" href="{{ .Site.BaseURL }}">
           <span itemprop="name">{{- .Site.Author.name -}}</span>
 

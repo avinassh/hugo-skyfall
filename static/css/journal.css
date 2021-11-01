@@ -202,3 +202,7 @@ h6 {
 .rc-scout__link {
     border-bottom: none;
 }
+
+.person-schema {
+  flex-shrink: 0;
+}
