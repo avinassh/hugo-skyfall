@@ -1,5 +1,10 @@
 
       <footer class="site-footer">
+        {{ if isset .Site.Params "rcscout" -}}
+        <div class="rc-scout" style="margin-right: auto; margin-top: auto; font-size: 0.6rem;"></div>
+        <script async defer src="https://www.recurse-scout.com/loader.js?t={{ .Site.Params.rcscout }}"></script>
+        {{- end }}
+
         <span itemscope itemtype="http://schema.org/Person">
           <link itemprop="url" href="{{ .Site.BaseURL }}">
           <span itemprop="name">{{- .Site.Author.name -}}</span>
