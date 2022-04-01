@@ -1,6 +1,11 @@
 
       <footer class="site-footer">
-        <span itemscope itemtype="http://schema.org/Person">
+        {{ if isset .Site.Params "rcscout" -}}
+        <div class="rc-scout" style="margin-right: auto; margin-top: auto; font-size: 0.6rem;"></div>
+        <script async defer src="https://www.recurse-scout.com/loader.js?t={{ .Site.Params.rcscout }}"></script>
+        {{- end }}
+
+        <span class="person-schema" itemscope itemtype="http://schema.org/Person">
           <link itemprop="url" href="{{ .Site.BaseURL }}">
           <span itemprop="name">{{- .Site.Author.name -}}</span>
 
@@ -14,8 +19,10 @@
           <br>
 
           {{ if isset .Site.Params "githubusername" -}}
-          <a itemprop="sameAs" href="https://github.com/{{ .Site.Params.githubUsername }}" title="GitHub">GH</a>
+          <a itemprop="sameAs" href="https://github.com/{{ .Site.Params.githubUsername }}" title="GitHub"><img src="{{ "svg/gh.svg" | relURL }}" alt="icon name"></a>
           {{- end }}
+
+          <a itemprop="sameAs" href="{{ "index.xml" | relURL }}" title="GitHub"><img src="{{ "svg/rss.svg" | relURL }}" alt="icon name"></a>
 
           {{ if isset .Site.Params "twitterusername" -}}
           <a itemprop="sameAs" href="https://twitter.com/{{ .Site.Params.twitterUsername }}" title="Twitter">TW</a>
@@ -32,6 +39,6 @@
 
   <script src="{{ "js/highlight.pack.js" | relURL }}"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-
+  {{ partial "analytics.html" . }}
   </body>
 </html>

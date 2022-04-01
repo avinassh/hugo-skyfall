@@ -151,6 +151,11 @@ h6 {
   .site-nav h1 {
     margin-bottom: .5rem; }
 
+.site-header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .site-nav a::before {
   content: '\2190';
   margin-right: .25rem; }
@@ -163,6 +168,11 @@ h6 {
   @media screen and (min-width: 800px) {
     .site-footer {
       margin-bottom: .5rem; } }
+
+.site-footer {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .posts ol {
   margin-left: 0;
@@ -178,11 +188,6 @@ h6 {
   @media screen and (min-width: 800px) {
     .posts time {
       flex: 0 0 5rem; } }
-  .posts time + a {
-    margin-left: 1rem; }
-    @media screen and (min-width: 800px) {
-      .posts time + a {
-        margin-left: 2rem; } }
 
 .post .post-header {
   margin-bottom: 3rem; }
@@ -193,3 +198,11 @@ h6 {
 
 .hljs {
   font-size: .875rem; }
+
+.rc-scout__link {
+    border-bottom: none;
+}
+
+.person-schema {
+  flex-shrink: 0;
+}
