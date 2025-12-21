@@ -150,6 +150,42 @@ code {
   background-color: $light-gray;
 }
 
+table {
+  width: 100%;
+  margin: $std-margin;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: .9rem;
+
+  th,
+  td {
+    padding: .75rem;
+    text-align: left;
+    border: 1px solid $light-gray;
+  }
+
+  thead th {
+    background-color: #f5f5f5;
+    border-bottom: 2px solid $gray;
+    font-weight: bold;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media screen and (max-width: $break-small) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: .8rem;
+  }
+}
+
 article,
 section {
   display: block;
@@ -213,6 +249,11 @@ h6 {
   margin-right: .25rem;
 }
 
+.site-header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .site-footer {
   margin: 3rem 0 0;
   font-size: .8125rem;
@@ -224,6 +265,11 @@ h6 {
   @media screen and (min-width: $break-small) {
     margin-bottom: .5rem;
   }
+}
+
+.site-footer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .posts {
@@ -274,4 +320,12 @@ h6 {
 
 .hljs {
   font-size: .875rem;
+}
+
+.rc-scout__link {
+  border-bottom: none;
+}
+
+.person-schema {
+  flex-shrink: 0;
 }
